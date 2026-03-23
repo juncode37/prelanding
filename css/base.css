@@ -1,0 +1,163 @@
+/* ============================================
+   BASE.CSS — Reset, Variables, Typography, Shared
+   ============================================ */
+
+/* --- Reset --- */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* --- CSS Variables (Theme) --- */
+:root {
+  /* Background */
+  --bg:          #faf8f5;
+  --bg-warm:     #f5f0ea;
+  --bg-card:     #ffffff;
+
+  /* Accent */
+  --rose:        #c4727f;
+  --rose-soft:   #d4949e;
+  --rose-deep:   #a85565;
+  --blush:       #f2e0e3;
+  --cream:       #f7f1ec;
+
+  /* Neutral */
+  --taupe:       #8a7e76;
+  --taupe-light: #b5a99e;
+
+  /* Text */
+  --text-dark:   #2c2424;
+  --text-body:   #5a4f4f;
+  --text-light:  #8a7e76;
+
+  /* Gold */
+  --gold:        #c4a86b;
+  --gold-soft:   #d4be8e;
+
+  /* Border */
+  --border:      #e8e0d8;
+
+  /* Spacing */
+  --section-pad-y: 5rem;
+  --section-pad-x: 1.5rem;
+  --max-width:     720px;
+}
+
+/* --- Base --- */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: var(--bg);
+  color: var(--text-body);
+  line-height: 1.75;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--rose); text-decoration: none; transition: color 0.3s ease; }
+a:hover { color: var(--rose-deep); }
+
+p {
+  color: var(--text-body);
+  margin-bottom: 1.4rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+/* --- Utility --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-pad-x);
+}
+
+.text-center { text-align: center; }
+
+/* --- Section Base --- */
+.section {
+  padding: var(--section-pad-y) var(--section-pad-x);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--rose-soft);
+}
+
+.section-eyebrow--center {
+  justify-content: center;
+}
+
+.section-heading {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+}
+
+/* --- Divider --- */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-pad-x);
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.divider-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--rose-soft);
+  border-radius: 50%;
+}
+
+/* --- Reveal Animation --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Mobile --- */
+@media (max-width: 600px) {
+  :root {
+    --section-pad-y: 3.5rem;
+    --section-pad-x: 1.2rem;
+  }
+}

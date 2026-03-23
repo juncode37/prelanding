@@ -1,0 +1,320 @@
+/* ============================================
+   LAYOUT.CSS — Page Layouts: Hero, Footer, CTA
+   ============================================ */
+
+/* --- Header Nav (shared across pages) --- */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 10;
+}
+
+.site-header__logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.site-header__nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-header__nav a {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--taupe);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-header__nav a:hover {
+  color: var(--rose);
+}
+
+/* --- Hero Section --- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 30%, rgba(196,114,127,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 60% at 80% 70%, rgba(196,168,107,0.05) 0%, transparent 60%),
+    linear-gradient(180deg, var(--bg) 0%, var(--cream) 100%);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 1px solid rgba(196,114,127,0.08);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: breathe 8s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  50%      { transform: translate(-50%, -50%) scale(1.08); opacity: 0.3; }
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+}
+
+.hero__tag {
+  display: inline-block;
+  padding: 0.35rem 1.5rem;
+  border: 1px solid var(--rose-soft);
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 2rem;
+  animation: fadeDown 0.8s ease-out;
+}
+
+.hero__title {
+  font-size: clamp(2.8rem, 7vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+  animation: fadeUp 0.8s ease-out 0.15s both;
+}
+
+.hero__title em {
+  font-style: italic;
+  color: var(--rose);
+}
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--text-light);
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+  animation: fadeUp 0.8s ease-out 0.3s both;
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  animation: fadeUp 0.8s ease-out 0.6s both;
+}
+
+.hero__scroll span {
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--taupe-light);
+}
+
+.hero__scroll::after {
+  content: '';
+  width: 1px;
+  height: 45px;
+  background: linear-gradient(180deg, var(--rose-soft), transparent);
+  animation: scrollPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50%      { opacity: 0.3; transform: scaleY(0.5); }
+}
+
+/* --- Final CTA --- */
+.final-cta {
+  text-align: center;
+  padding: var(--section-pad-y) var(--section-pad-x) 4rem;
+  position: relative;
+}
+
+.final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 100%, rgba(196,114,127,0.05) 0%, transparent 60%);
+}
+
+.final-cta__inner {
+  position: relative;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.final-cta p {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+/* --- Footer --- */
+.footer {
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  background: var(--bg-warm);
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+
+.footer__nav a {
+  font-size: 0.75rem;
+  color: var(--taupe);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.footer__nav a:hover { color: var(--rose); }
+
+.footer__info {
+  font-size: 0.72rem;
+  color: var(--taupe-light);
+  line-height: 1.8;
+}
+
+.footer__info a {
+  color: var(--taupe);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* --- Legal Page Layout --- */
+.page-legal {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem var(--section-pad-x) 4rem;
+}
+
+.page-legal h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.page-legal .page-date {
+  font-size: 0.8rem;
+  color: var(--taupe-light);
+  margin-bottom: 2.5rem;
+}
+
+.page-legal h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.page-legal p,
+.page-legal li {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  margin-bottom: 1rem;
+}
+
+.page-legal ul,
+.page-legal ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-legal li {
+  margin-bottom: 0.5rem;
+}
+
+/* --- Contact Page --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-card__label {
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--taupe-light);
+  margin-bottom: 0.5rem;
+}
+
+.contact-card__value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+}
+
+.contact-card__value a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.contact-card__value a:hover {
+  color: var(--rose);
+}
+
+/* --- Mobile --- */
+@media (max-width: 600px) {
+  .hero { min-height: 90vh; padding: 3rem 1.2rem; }
+  .site-header { padding: 0.8rem 1.2rem; }
+  .site-header__nav { gap: 1rem; }
+  .site-header__nav a { font-size: 0.65rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
