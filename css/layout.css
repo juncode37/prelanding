@@ -74,14 +74,15 @@
 .hero::after {
   content: '';
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
-  border: 1px solid rgba(196,114,127,0.08);
+  border: 2px solid rgba(196,114,127,0.25);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: breathe 8s ease-in-out infinite;
+  z-index: 1;
 }
 
 @keyframes breathe {
