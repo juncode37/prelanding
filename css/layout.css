@@ -301,11 +301,21 @@
 }
 
 .mid-cta__images-top {
-  align-self: flex-start;
+  align-self: center;
 }
 
 .mid-cta__images-bottom {
-  align-self: flex-end;
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .mid-cta__images-top {
+    align-self: flex-start;
+  }
+
+  .mid-cta__images-bottom {
+    align-self: flex-end;
+  }
 }
 
 .mid-cta {
