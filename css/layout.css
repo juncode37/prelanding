@@ -300,6 +300,14 @@
   max-width: 300px;
 }
 
+.mid-cta__images-top {
+  align-self: flex-start;
+}
+
+.mid-cta__images-bottom {
+  align-self: flex-end;
+}
+
 .mid-cta {
   width: 100%;
   max-width: 600px;
