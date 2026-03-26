@@ -3,8 +3,8 @@
   font-family: 'Cormorant Garamond';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url('../assets/fonts/cormorant-garamond-400.ttf') format('truetype');
+  font-display: fallback;
+  src: url('../assets/fonts/cormorant-garamond-400.woff2') format('woff2');
 }
 
 /* Cormorant Garamond - 400 Italic */
@@ -12,8 +12,8 @@
   font-family: 'Cormorant Garamond';
   font-style: italic;
   font-weight: 400;
-  font-display: swap;
-  src: url('../assets/fonts/cormorant-garamond-400i.ttf') format('truetype');
+  font-display: fallback;
+  src: url('../assets/fonts/cormorant-garamond-400i.woff2') format('woff2');
 }
 
 /* Cormorant Garamond - 500 Regular */
@@ -21,8 +21,8 @@
   font-family: 'Cormorant Garamond';
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
-  src: url('../assets/fonts/cormorant-garamond-500.ttf') format('truetype');
+  font-display: fallback;
+  src: url('../assets/fonts/cormorant-garamond-500.woff2') format('woff2');
 }
 
 /* Cormorant Garamond - 500 Italic */
@@ -30,8 +30,8 @@
   font-family: 'Cormorant Garamond';
   font-style: italic;
   font-weight: 500;
-  font-display: swap;
-  src: url('../assets/fonts/cormorant-garamond-500i.ttf') format('truetype');
+  font-display: fallback;
+  src: url('../assets/fonts/cormorant-garamond-500i.woff2') format('woff2');
 }
 
 /* Cormorant Garamond - 600 Regular */
@@ -39,8 +39,8 @@
   font-family: 'Cormorant Garamond';
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
-  src: url('../assets/fonts/cormorant-garamond-600.ttf') format('truetype');
+  font-display: fallback;
+  src: url('../assets/fonts/cormorant-garamond-600.woff2') format('woff2');
 }
 
 /* Cormorant Garamond - 700 Regular */
@@ -48,8 +48,8 @@
   font-family: 'Cormorant Garamond';
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-  src: url('../assets/fonts/cormorant-garamond-700.ttf') format('truetype');
+  font-display: fallback;
+  src: url('../assets/fonts/cormorant-garamond-700.woff2') format('woff2');
 }
 
 /* Raleway - 300 Light */
@@ -57,8 +57,8 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 300;
-  font-display: swap;
-  src: url('../assets/fonts/raleway-300.ttf') format('truetype');
+  font-display: fallback;
+  src: url('../assets/fonts/raleway-300.woff2') format('woff2');
 }
 
 /* Raleway - 400 Regular */
@@ -66,8 +66,8 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url('../assets/fonts/raleway-400.ttf') format('truetype');
+  font-display: fallback;
+  src: url('../assets/fonts/raleway-400.woff2') format('woff2');
 }
 
 /* Raleway - 500 Medium */
@@ -75,8 +75,8 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
-  src: url('../assets/fonts/raleway-500.ttf') format('truetype');
+  font-display: fallback;
+  src: url('../assets/fonts/raleway-500.woff2') format('woff2');
 }
 
 /* Raleway - 600 SemiBold */
@@ -84,6 +84,6 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
-  src: url('../assets/fonts/raleway-600.ttf') format('truetype');
+  font-display: fallback;
+  src: url('../assets/fonts/raleway-600.woff2') format('woff2');
 }
