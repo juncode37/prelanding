@@ -1,0 +1,89 @@
+/* Cormorant Garamond - 400 Regular */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/cormorant-garamond-400.ttf') format('truetype');
+}
+
+/* Cormorant Garamond - 400 Italic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/cormorant-garamond-400i.ttf') format('truetype');
+}
+
+/* Cormorant Garamond - 500 Regular */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../assets/fonts/cormorant-garamond-500.ttf') format('truetype');
+}
+
+/* Cormorant Garamond - 500 Italic */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../assets/fonts/cormorant-garamond-500i.ttf') format('truetype');
+}
+
+/* Cormorant Garamond - 600 Regular */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../assets/fonts/cormorant-garamond-600.ttf') format('truetype');
+}
+
+/* Cormorant Garamond - 700 Regular */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/cormorant-garamond-700.ttf') format('truetype');
+}
+
+/* Raleway - 300 Light */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../assets/fonts/raleway-300.ttf') format('truetype');
+}
+
+/* Raleway - 400 Regular */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/raleway-400.ttf') format('truetype');
+}
+
+/* Raleway - 500 Medium */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../assets/fonts/raleway-500.ttf') format('truetype');
+}
+
+/* Raleway - 600 SemiBold */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../assets/fonts/raleway-600.ttf') format('truetype');
+}
